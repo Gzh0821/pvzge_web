@@ -6,6 +6,6 @@
     "target": "AppImage",
     "category": "Game"
   },
-  "files": ["main.js", "docs/**/*", "resources/**/*", "package.json"],
+  "files": ["main.js", "preload.js", "ipcHandlers.js", "docs/**/*", "resources/**/*", "package.json"],
   "asar": true
 }

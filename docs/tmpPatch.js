@@ -53,4 +53,6 @@ const electron = {
   }
 };
 
-window.electron = electron;
+if (!window.electron) {
+  window.electron = electron;
+}
