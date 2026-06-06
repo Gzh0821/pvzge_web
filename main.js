@@ -1,5 +1,7 @@
 const { BrowserWindow, app } = require("electron");
 
+app.commandLine.appendSwitch("no-sandbox");
+
 const path = require("node:path");
 const root = __dirname;
 const icon = path.resolve(root, "resources", "icon.png");
