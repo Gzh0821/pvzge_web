@@ -1,0 +1,38 @@
+name: Deploy web game
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out complete game assets
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Verify LFS assets
+        run: git lfs fsck
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload game
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+      - name: Deploy game
+        id: deployment
+        uses: actions/deploy-pages@v4
