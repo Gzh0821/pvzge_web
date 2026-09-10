@@ -29,6 +29,10 @@ Try PvZ2 Gardendless online in [here](https://play.pvzge.com/) !
 
 - Note: The version for online play may not be the latest version and may load slowly. For more related issues, please refer to the relevant instructions on the official website
 
+## Source checkout
+
+Install Git LFS before cloning this repository. After pulling updates, run `git lfs pull` to download large game assets before serving `docs/` or building a Docker image.
+
 ## Using Docker
 
 Deploy the game locally by using [Docker image](https://hub.docker.com/r/gaozih/pvzge)
