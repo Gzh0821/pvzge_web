@@ -1,0 +1,11 @@
+{
+  "appId": "com.pvzge.app",
+  "productName": "PVZGE",
+  "icon": "resources/icon.png",
+  "linux": {
+    "target": "AppImage",
+    "category": "Game"
+  },
+  "files": ["main.js", "preload.js", "ipcHandlers.js", "docs/**/*", "resources/**/*", "package.json"],
+  "asar": true
+}

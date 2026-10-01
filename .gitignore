@@ -1,1 +1,4 @@
 /.vscode
+/dist
+/out
+node_modules
